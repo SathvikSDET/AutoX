@@ -1,0 +1,7 @@
+##Locators
+
+username xpath //input[@name='text']
+password xpath //input[@name='password']
+
+
+

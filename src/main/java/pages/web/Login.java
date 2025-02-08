@@ -1,10 +1,13 @@
 package pages.web;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import core.LocatorHelper;
+import core.LocatorType;
 import core.LogManagerHelper;
 import core.PomHelperWeb;
 import core.WebExceptions;
@@ -23,6 +26,22 @@ public class Login extends PomHelperWeb {
     public Login(WebDriver driver) {
         super(driver);
     }
+    
+    // Dynamic element retrieval
+    private WebElement getDynamicElement(String key) {
+        LocatorType type = LocatorHelper.getLocatorType(key);
+        String value = LocatorHelper.getLocatorValue(key);
+
+        return switch (type) {
+            case XPATH -> driver.findElement(By.xpath(value));
+            case CSS -> driver.findElement(By.cssSelector(value));
+            case ID -> driver.findElement(By.id(value));
+        };
+    }
+    
+    
+    
+    
     public boolean isDisplayed() {
     	return phoneOrEmailInput.isDisplayed();
     }

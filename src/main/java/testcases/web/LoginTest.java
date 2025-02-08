@@ -37,7 +37,7 @@ public class LoginTest {
 	@Test
 	public void testValidation() throws WebExceptions, InterruptedException {
 		LogManagerHelper.info("Starting valid login test...");
-		loginPage.enterPassword(config.getProperty("username"));
+		loginPage.enterUsername(config.getProperty("username"));
 		
 		Thread.sleep(10000);
 		if(loginPage.isDisplayed()) {
