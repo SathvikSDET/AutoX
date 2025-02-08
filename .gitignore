@@ -1,0 +1,46 @@
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Java build files
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore Maven and Gradle files
+target/
+build/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+.mvn/
+!mvn/wrapper/maven-wrapper.jar
+
+# Ignore IDE files (IntelliJ, Eclipse, VS Code)
+.idea/
+*.iml
+.vscode/
+*.log
+
+# Ignore test reports and logs
+test-output/
+logs/
+*.log
+*.tmp
+
+# Ignore screenshots or attachments
+screenshots/
+attachments/
+
+# Ignore config files
+config/config.properties
+*.env
+
+# Ignore linting and code coverage files
+.checkstyle/
+.sonar/
+jacoco.exec
+
+# Ignore Selenium/Appium-related files
+selenium-screenshots/
+appium-logs/
