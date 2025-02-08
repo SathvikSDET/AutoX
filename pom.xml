@@ -10,6 +10,7 @@
 		<selenium.version>4.28.1</selenium.version>
 		<log4j.core>2.24.3</log4j.core>
 		<log4j.api>2.24.3</log4j.api>
+		<testng.version>7.10.1</testng.version>
 	</properties>
 
 
@@ -31,6 +32,15 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>${log4j.api}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 
