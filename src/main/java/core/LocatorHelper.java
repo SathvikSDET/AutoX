@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class LocatorHelper {
 
-    private static final String LOCATOR_FILE_PATH = "config/locators.txt"; 
+    private static final String LOCATOR_FILE_PATH = "config/twitterLocator.txt"; 
     private static final Map<String, String> locators = new HashMap<>();
 
     static {

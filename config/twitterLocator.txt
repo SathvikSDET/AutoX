@@ -2,6 +2,12 @@
 
 username xpath //input[@name='text']
 password xpath //input[@name='password']
+Explore xpath //span[normalize-space()='Explore']
+Trending xpath //span[normalize-space()='Trending']
+TreadingData xpath //*[@data-testid='cellInnerDiv']
+
+
+
 
 
 

@@ -3,6 +3,7 @@ package core;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -73,6 +74,33 @@ public abstract class PomHelperWeb {
 		} catch (Exception e) {
 			return false;
 		}
+	}
+
+	public WebElement getDynamicElement(String key) throws WebExceptions {
+		LocatorType type = LocatorHelper.getLocatorType(key);
+		String value = LocatorHelper.getLocatorValue(key);
+
+		return switch (type) {
+		case XPATH -> findElement(driver.findElement(By.xpath(value)));
+		case CSS -> findElement(driver.findElement(By.cssSelector(value)));
+		case ID ->findElement(driver.findElement(By.id(value)));
+		};
+	}
+	public List<WebElement> getDynamicElements(String key)   {
+		LocatorType type = LocatorHelper.getLocatorType(key);
+		String value = LocatorHelper.getLocatorValue(key);
+
+		return switch (type) {
+		case XPATH -> (driver.findElements(By.xpath(value)));
+		case CSS -> (driver.findElements(By.cssSelector(value)));
+		case ID ->(driver.findElements(By.id(value)));
+		};
+	}
+	public boolean isDisplayed(String locatorKey) throws WebExceptions {
+		WebElement element = getDynamicElement(locatorKey);
+		boolean visble = element.isDisplayed();
+		LogManagerHelper.info("Element: " + locatorKey + "visbility: " + visble);
+		return visble;
 	}
 
 }

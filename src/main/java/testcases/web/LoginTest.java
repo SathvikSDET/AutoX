@@ -1,5 +1,7 @@
 package testcases.web;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -10,7 +12,9 @@ import core.LogManagerHelper;
 import core.WebExceptions;
 import drivers.web.DriverFactory;
 import drivers.web.iDriver;
+import pages.web.Explore;
 import pages.web.Login;
+import pages.web.SideBar;
 
 
 public class LoginTest {
@@ -19,6 +23,8 @@ public class LoginTest {
 	private iDriver driverFactory;
 	private Login loginPage;
 	private ConfigManager config;
+	private SideBar sideBar;
+	private Explore explore;
 	
 	
 	@BeforeClass
@@ -30,6 +36,7 @@ public class LoginTest {
 		driver.manage().window().maximize();
 		driver.get("https://x.com/login");
 		loginPage = new Login(driver);
+		
 		LogManagerHelper.info("Test Setup Completed.");
 	}
 	
@@ -40,12 +47,28 @@ public class LoginTest {
 		loginPage.enterUsername(config.getProperty("username"));
 		
 		Thread.sleep(10000);
-		if(loginPage.isDisplayed()) {
+		/*if(loginPage.isDisplayed()) {
 			loginPage.enterPhoneOrEmailInput(config.getProperty("email"));
-		}
-		Thread.sleep(10000);
+		}*/
+		//Thread.sleep(10000);
 		loginPage.enterPassword(config.getProperty("password"));
 		LogManagerHelper.info("Valid Login Completed");
+		Thread.sleep(10000);
+		LogManagerHelper.info("Clicking on Explore...");
+		sideBar = new SideBar(driver);
+		sideBar.initializElements();
+		sideBar.clickExplore();
+		Thread.sleep(10000);
+		explore = new Explore(driver);
+		explore.initializElements();
+		List<String> trendingData= explore.getTrendingData();
+		for (String string : trendingData) {
+			System.out.println("---------------");
+			System.out.println(string);
+			
+		}
+		
+		
 	}
 	
 	@AfterClass
