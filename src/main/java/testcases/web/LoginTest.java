@@ -63,11 +63,8 @@ public class LoginTest {
 		explore.initializElements();
 		List<String> trendingData= explore.getTrendingData();
 		for (String string : trendingData) {
-			System.out.println("---------------");
 			System.out.println(string);
-			
 		}
-		
 		
 	}
 	

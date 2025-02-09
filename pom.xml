@@ -11,6 +11,8 @@
 		<log4j.core>2.24.3</log4j.core>
 		<log4j.api>2.24.3</log4j.api>
 		<testng.version>7.10.1</testng.version>
+		<restassured>5.4.0</restassured>
+		<json.processing>20210307</json.processing>
 	</properties>
 
 
@@ -41,6 +43,18 @@
 			<artifactId>testng</artifactId>
 			<version>${testng.version}</version>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${restassured}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>${json.processing}</version>
 		</dependency>
 
 
