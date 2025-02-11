@@ -142,7 +142,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>${maven.jar.version}</version>
                 <configuration>
-                    <outputDirectory>${package.directory}/libs</outputDirectory>
+                    <outputDirectory>${package.directory}</outputDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -151,7 +151,11 @@
                         </goals>
                         <configuration>
                             <includes>**/*.class</includes>
+                            <outputDirectory>
+                                ${package.directory}/libs
+                            </outputDirectory>
                         </configuration>
+                         
                     </execution>
                 </executions>
             </plugin>
