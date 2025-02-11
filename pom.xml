@@ -152,7 +152,7 @@
                         <configuration>
                             <includes>**/*.class</includes>
                             <outputDirectory>
-                                ${package.directory}/libs
+                                ${package.directory}
                             </outputDirectory>
                         </configuration>
                          
