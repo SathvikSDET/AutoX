@@ -111,6 +111,17 @@ This framework supports **Jenkins & GitHub Actions**.
 
 ---
 
+## Creating JARs of Project AutoX
+
+1. mvn clean package -DskipTests
+2. java -cp "target/docker-resources/AutoX-docker-tests.jar:target/docker-resources/AutoX-docker.jar:target/docker-resources/libs/*" 
+             -Dselenium.grid.enabled=false
+             -Dbrowser="${BROWSER:-chrome}"
+             -threadcount "${THREAD_COUNT:-1}"
+   org.testng.TestNG testng.xml 
+             
+
+
 ## 🤝 Contributing
 1. **Fork** the repository.  
 2. **Create a branch:** `git checkout -b feature-branch`  
