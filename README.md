@@ -25,7 +25,7 @@ This repository contains a scalable **Test Automation Framework** built with **J
 
 | Category       | Tools/Frameworks |
 |---------------|----------------|
-| **Language**  | Java (11+) |
+| **Language**  | Java (17+) |
 | **Test Framework** | TestNG |
 | **Web UI Automation** | Selenium |
 | **Mobile Automation** | Appium |
@@ -34,6 +34,7 @@ This repository contains a scalable **Test Automation Framework** built with **J
 | **Reporting** | Extent Reports / Allure |
 | **Version Control** | Git / GitHub |
 | **CI/CD** | Jenkins, GitHub Actions |
+| **AI** | deepSeek |
 
 
 ## ⚙️ Setup & Installation
