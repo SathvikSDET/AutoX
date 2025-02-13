@@ -4,9 +4,9 @@
 ![image alt](https://github.com/SathvikSDET/AutoX/blob/e34d5f4de39e28035d381db0370d7f5529d54aae/HLD.png)
 
 
-# 🏆 AutoX - Test Automation Framework using TestNG, Selenium, Appium, and RestAssured
+# AutoX - Test Automation Framework using TestNG, Selenium, Appium, and RestAssured
 
-This repository contains a scalable **Test Automation Framework** built with **Java, TestNG, Selenium, Appium, and RestAssured** for **UI, API, and Mobile Testing**.
+This repository contains a scalable **Test Automation Framework** built with **Java, TestNG, Selenium, Appium, and RestAssured** for **UI, API, and Mobile Testing**, integrating with a local AI module.
 
 ---
 
