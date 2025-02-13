@@ -120,7 +120,7 @@ This framework supports **Jenkins & GitHub Actions**.
              -threadcount "${THREAD_COUNT:-1}"
    org.testng.TestNG testng.xml 
              
-
+---
 
 ## 🤝 Contributing
 1. **Fork** the repository.  
