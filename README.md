@@ -112,10 +112,14 @@ This framework supports **Jenkins & GitHub Actions**.
 
 ---
 
-## Creating JARs of Project AutoX
+## Build Project JAR AutoX
 
 1. mvn clean package -DskipTests
-2. java -cp "target/docker-resources/AutoX-docker-tests.jar:target/docker-resources/AutoX-docker.jar:target/docker-resources/libs/*" 
+---
+
+#Run tests using JAR:
+
+1. java -cp "target/docker-resources/AutoX-docker-tests.jar:target/docker-resources/AutoX-docker.jar:target/docker-resources/libs/*" 
              -Dselenium.grid.enabled=false
              -Dbrowser="${BROWSER:-chrome}"
              -threadcount "${THREAD_COUNT:-1}"
