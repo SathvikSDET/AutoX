@@ -41,8 +41,8 @@ This repository contains a scalable **Test Automation Framework** built with **J
 
 ### 1️⃣ Clone the repository
 ```sh
-git clone https://github.com/your-repo/automation-framework.git
-cd automation-framework
+git clone https://github.com/SathvikSDET/AutoX.git
+cd AutoX
 ```
 
 ### 2️⃣ Configure Dependencies
@@ -50,10 +50,7 @@ cd automation-framework
   ```sh
   mvn clean install
   ```
-- **For Gradle Users:**
-  ```sh
-  gradle build
-  ```
+
 
 ### 3️⃣ Configure Test Execution
 - Update the **`config.properties`** file:
@@ -96,11 +93,6 @@ String browser = ConfigManager.getProperty("browser");
 After test execution, reports are generated in:
 ```
 test-output/ExtentReports/
-```
-
-### 2️⃣ Allure Reports
-```sh
-allure serve allure-results
 ```
 
 ---
