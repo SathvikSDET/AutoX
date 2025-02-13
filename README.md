@@ -117,7 +117,7 @@ This framework supports **Jenkins & GitHub Actions**.
 1. mvn clean package -DskipTests
 ---
 
-#Run tests using JAR:
+###Run tests using JAR:
 
 1. java -cp "target/docker-resources/AutoX-docker-tests.jar:target/docker-resources/AutoX-docker.jar:target/docker-resources/libs/*" 
              -Dselenium.grid.enabled=false
