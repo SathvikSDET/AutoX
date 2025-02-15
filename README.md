@@ -115,7 +115,7 @@ This framework supports **Jenkins & GitHub Actions**.
              -Dselenium.grid.enabled=false
              -Dbrowser="${BROWSER:-chrome}"
              -threadcount "${THREAD_COUNT:-1}"
-   org.testng.TestNG testng.xml 
+   org.testng.TestNG {testng_file}.xml 
              
 ---
 
