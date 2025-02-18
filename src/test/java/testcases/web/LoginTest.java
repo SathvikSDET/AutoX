@@ -1,11 +1,5 @@
 package testcases.web;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
-
-import TestBase.TestBase;
-
-import org.testng.annotations.BeforeMethod;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -13,11 +7,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import TestBase.*;
 import core.ConfigManager;
 import core.LogManagerHelper;
 import core.WebExceptions;
-import drivers.web.DriverFactory;
-import drivers.web.iDriver;
 import pages.web.Explore;
 import pages.web.Login;
 import pages.web.SideBar;
@@ -25,11 +18,12 @@ import pages.web.SideBar;
 
 public class LoginTest extends TestBase{
 	
-	private WebDriver driver;
+	protected WebDriver driver;
 	private Login loginPage;
 	private ConfigManager config;
 	private SideBar sideBar;
 	private Explore explore;
+	private Listener listener;
 	
 	
 	@BeforeClass
@@ -41,6 +35,7 @@ public class LoginTest extends TestBase{
 		driver.get("https://x.com/login");
 		loginPage = new Login(driver);
 		LogManagerHelper.info("Test Setup Completed.");
+		listener = new Listener(driver);
 	}
 	
 	
@@ -83,6 +78,9 @@ public class LoginTest extends TestBase{
 		
 	}
 	
+	public WebDriver getDriver() {
+        return driver;
+    }
 	
 	
 	
